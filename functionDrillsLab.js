@@ -70,6 +70,7 @@ console.log(printName('Tanner'))
 
 
 function greeting(name){
+   name = String(name)
   console.log(`hello ${name}.`)
 
 }
@@ -117,6 +118,16 @@ console.log(compareNums(76, 23))
 
 //CODE HERE
 
+console.log('-------------------')
+
+function add(num1, num2){
+  let param1 = Number(num1)
+  let param2 = Number(num2)
+  return param1 + param2;
+}
+
+console.log(add('5','8'))
+
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -131,7 +142,10 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
+
+
+
 
 
 
@@ -146,7 +160,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -157,6 +171,11 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
+
+const exclaimThree = str => str.toUpperCase() + `!!!`
+
+
+console.log(exclaimThree(`tanner`))
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -171,7 +190,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -187,6 +206,21 @@ function exclaimFour(str) {
 //CODE HERE
 
 
+function nameCheck(name){
+  if(name === 'Steven'){
+    return `What is up ${name}?`
+  } else if(name === 'Bryan'){
+    return `hey ${name}`
+  } else{ 
+    return `Cool name, ${name}`
+  }
+}
+
+let nameGreeting = nameCheck('Tanner')
+
+console.log(nameGreeting)
+
+
 ////////////////// PROBLEM 11 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -197,7 +231,26 @@ function exclaimFour(str) {
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
+console.log('===================================')
+
 //CODE HERE
+
+
+function faveColorFinder(color){
+if(color === 'red'){
+  return `${color} is a great color`
+} else if(color === 'green'){
+  return `${color} is a solid colors favorite color`
+} else if(color === 'black'){
+  return `${color} so trendy`
+} else{
+  return `you need to evaluate your favorite color choice.`
+}
+}
+
+let colorRating = faveColorFinder('yellow')
+
+console.log(colorRating)
 
 
 ////////////////// PROBLEM 12 ////////////////////
