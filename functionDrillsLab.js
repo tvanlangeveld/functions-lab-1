@@ -93,9 +93,7 @@ greeting('Tanner')
 console.log('==================')
 
 const compareNums = (num1, num2) => {
-  if(num1 === num2){
-    return num1;
-  } else if(num1 > num2){
+  if(num1 >= num2){
     return num1
   } else{
     return num2
@@ -103,7 +101,7 @@ const compareNums = (num1, num2) => {
 }
 
 
-console.log(compareNums(76, 23))
+console.log(compareNums(12, 76))
 
 
 
@@ -264,6 +262,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 //CODE HERE
 
 
+function printAllNames(names){
+  for(let i = 0; i < names.length; i++){
+    console.log(names[i])
+  }
+}
+
+printAllNames(namesArr)
+
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -271,8 +277,21 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Otherwise, return 'That is odd indeed!'
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
-
+console.log('=======================')
 //CODE HERE
+
+
+function thatsOdd(num1){
+  if(num1 % 2 === 0){
+    return 'thats not odd'
+    } else{
+      return 'That is indeed odd.'
+    }
+  }
+
+let oddChecker = thatsOdd(7)
+
+console.log(oddChecker)
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -285,8 +304,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
+console.log('=================')
+
 //CODE HERE
 
+
+const bestMoive = movie => `${movie} is the best movie ever!`
+
+
+console.log(bestMoive('Iron Man!!'))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -298,8 +324,26 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. 
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
+console.log('===================')
+
+
 
 //CODE HERE
+
+function bigOrSmall(arr){
+  let answers = [];
+  for(let i = 0; i < arr.length; i++){
+   if(arr[i] > 100){
+    answers.push('big')
+   } else if(arr[i] <= 100){
+    answers.push('small')
+   }
+  } return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+
+console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -311,6 +355,19 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+
+function theEliminator(arr1, arr2){
+  for(let i = 0; i < arr1.length; i++){
+    if(arr1[i] = arr2){
+      arr1.splice()
+    }
+  } return contestants
+}
+
+
+theEliminator(contestants, loser)
+
+console.log(contestants)
 
 
 ////////////////// PROBLEM 17 ////////////////////
