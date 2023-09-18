@@ -358,16 +358,16 @@ let loser = 'Glimmer'
 
 function theEliminator(arr1, arr2){
   for(let i = 0; i < arr1.length; i++){
-    if(arr1[i] = arr2){
-      arr1.splice()
+    if(arr1[i] === arr2){
+      arr1.splice(i,1)
     }
-  } return contestants
+  } return contestants;
 }
 
 
-theEliminator(contestants, loser)
+let updatedContestants = theEliminator(contestants, loser)
 
-console.log(contestants)
+console.log(updatedContestants)
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -379,6 +379,12 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+
+function newFunction(string){
+  return string.toUpperCase()
+}
+
+console.log(newFunction(sampleString))
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
