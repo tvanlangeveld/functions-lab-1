@@ -470,7 +470,22 @@ function arrayAscent(arr1){
 
 let arrayIsAscending = arrayAscent(sampleArray)
 
-console.log(arrayIsAscending)
+// console.log(arrayIsAscending)
+
+
+let array234 = [2, 8, 10, 11, 18]
+
+let arrow1 = (arr) => {
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 !== 0 ){
+      return false
+    } 
+} return true
+}
+
+let evenArray = arrow1(array234)
+console.log(evenArray)
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -495,7 +510,7 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
 let bathroomScope = []
