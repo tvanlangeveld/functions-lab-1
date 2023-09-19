@@ -397,6 +397,21 @@ console.log(newFunction(sampleString))
   return 'must provide a valid email address'
 */
 
+console.log('+++++++++++++++++++++++')
+
+function emailCheck(email){
+  email = String(email)
+  email = email.trim()
+  if(email.includes('@')){
+    return 'Email Verified'
+  } else{
+    return 'email is not verified'
+  }
+}
+
+
+console.log(emailCheck('tanner@gmail.com  '))
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -406,12 +421,32 @@ console.log(newFunction(sampleString))
 //CODE HERE
 
 
+console.log('-----------------------------')
+
+function chocolateFrogCounter(frog){
+  return frog / 3;
+}
+
+let totalFrogs = chocolateFrogCounter(12)
+
+console.log(totalFrogs)
+
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
+function chocolateFrogCounter2(frog){
+   let frogger = frog / 3;
+   return Math.round(frogger)
+}
+
+
+let totalFrogs2 = chocolateFrogCounter2(65)
+
+console.log(totalFrogs2)
+
 
 
 ////////////////// PROBLEM 21 ////////////////////
@@ -421,6 +456,21 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+
+function arrayAscent(arr1){
+  let compareVal = [0];
+  for(let i = 0; i < arr1.length; i++){
+    if(arr1[i] <= compareVal){
+      return false
+    } else{
+      compareVal = arr[i]
+    }
+  } return true
+}
+
+let arrayIsAscending = arrayAscent(sampleArray)
+
+console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 22 ////////////////////
